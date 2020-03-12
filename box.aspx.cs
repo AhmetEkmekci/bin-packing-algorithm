@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using System.Web;
@@ -35,7 +35,7 @@ public partial class box : System.Web.UI.Page
         boxes = new int[npow, npow,2];
         //if (!IsPostBack)
         {
-            if (Session["create"].ToString() != "1")
+            if (Session["create"] == null || Session["create"].ToString() != "1")
             {
                 Random rnd = new Random();
                 for (int i = 0; i <= boxes.GetUpperBound(0); i++)
